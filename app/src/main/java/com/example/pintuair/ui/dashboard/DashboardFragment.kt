@@ -35,6 +35,11 @@ class DashboardFragment : Fragment() {
         return root
     }
 
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
