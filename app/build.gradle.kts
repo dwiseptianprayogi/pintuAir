@@ -2,6 +2,7 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.gms.google-services")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -53,4 +54,18 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    
+    implementation ("com.squareup.retrofit2:adapter-rxjava2:2.6.2")
+    implementation ("com.squareup.okhttp3:logging-interceptor:3.11.0")
+    implementation ("io.reactivex.rxjava2:rxandroid:2.0.2")
+    implementation ("io.reactivex.rxjava2:rxkotlin:2.2.0")
+    implementation ("com.squareup.retrofit2:retrofit:2.6.2")
+    implementation ("com.squareup.retrofit2:converter-gson:2.4.0")
+
+    implementation ("com.airbnb.android:lottie:3.4.4")
+    implementation ("androidx.multidex:multidex:2.0.1")
+    implementation ("androidx.preference:preference-ktx:1.2.1")
+
+    implementation ("pl.droidsonroids.gif:android-gif-drawable:1.2.22")
+
 }

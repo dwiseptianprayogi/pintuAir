@@ -38,7 +38,7 @@ class HomeFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        binding.btnPintu
+
     }
 
     override fun onDestroyView() {
