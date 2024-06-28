@@ -28,16 +28,27 @@ class HistoryAdapter (
         /*holder.bind(listData[position], itemAdapterCallback)*/
         with(holder){
             with(listData[position]){
+                binding.tvDate.text = this.CreatedAt
                 binding.tvTempVal.text = this.TinggiAir
                 binding.tvHumVal.text = this.KelTanah
                 binding.tvVoltVal.text = this.ArusAir
+                binding.tvKeteranganVal.text = this.Keterangan
 
                 if (StatPintu == "Terbuka"){
                     binding.tvWarning.visibility = View.VISIBLE
                     binding.tvSuccess.visibility = View.GONE
-                } else{
+                }
+                else if (StatPompa == "Hidup"){
+                    binding.tvPompaValHidup.visibility = View.VISIBLE
+                    binding.tvPompaValMati.visibility = View.GONE
+                }
+                else{
                     binding.tvWarning.visibility = View.GONE
                     binding.tvSuccess.visibility = View.VISIBLE
+
+                    binding.tvPompaValHidup.visibility = View.GONE
+                    binding.tvPompaValMati.visibility = View.VISIBLE
+
                 }
             }
         }

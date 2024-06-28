@@ -7,17 +7,6 @@
     android:paddingBottom="16dp">
 
     <TextView
-        android:id="@+id/tvPrice"
-        style="@style/TextView.PoppinsNormal10sp202020"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="24dp"
-        android:text="Status Pintu:"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
-
-    <TextView
         android:id="@+id/tvDate"
         style="@style/TextView.PoppinsNormal20sp8D92A3"
         android:layout_width="wrap_content"
@@ -29,13 +18,24 @@
         tools:text="Jun 12, 14:00" />
 
     <TextView
+        android:id="@+id/tvPrice"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="24dp"
+        android:text="Status Pintu:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+    <TextView
         android:id="@+id/tvWarning"
         style="@style/TextView.PoppinsNormal10spD9435E"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
-        android:text="Terbuka"
+        android:text="Pintu Air Terbuka"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDate"
@@ -47,11 +47,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
-        android:text="Tertutup"
+        android:text="Pintu Air Tertutup"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvDate"
         tools:visibility="visible"/>
+
     <TextView
         android:id="@+id/tvSuccess2"
         style="@style/TextView.PoppinsNormal10sp1ABC9C"
@@ -66,15 +67,65 @@
         tools:visibility="visible"/>
 
     <TextView
+        android:id="@+id/tvPompa"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:text="Status Pompa:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+
+    <TextView
+        android:id="@+id/tvPompaValHidup"
+        style="@style/TextView.PoppinsNormal10spD9435E"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="5dp"
+        android:text="Pompa Air Hidup"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSuccess2"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvPompaValMati"
+        style="@style/TextView.PoppinsNormal10sp1ABC9C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="5dp"
+        android:text="Pompa Air Mati"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSuccess2"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tvPompaValEmpty"
+        style="@style/TextView.PoppinsNormal10sp1ABC9C"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSuccess2"
+        tools:visibility="visible" />
+
+    <TextView
         android:id="@+id/tvTemp"
         style="@style/TextView.PoppinsNormal10sp202020"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
         android:text="Tinggi Air :"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/tvPompa" />
 
     <TextView
         android:id="@+id/tvTempVal"
@@ -85,7 +136,8 @@
         android:layout_marginTop="5dp"
         android:text="0"
         app:layout_constraintEnd_toStartOf="@+id/tvTempValDerajat"
-        app:layout_constraintTop_toBottomOf="@+id/tvSuccess2"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvPompaValEmpty"/>
+
     <TextView
         android:id="@+id/tvTempValDerajat"
         style="@style/TextView.PoppinsNormal10sp202020"
@@ -95,7 +147,7 @@
         android:layout_marginTop="5dp"
         android:text="cm"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSuccess2"
+        app:layout_constraintTop_toBottomOf="@+id/tvPompaValEmpty"
         />
 
     <TextView
@@ -136,8 +188,8 @@
         style="@style/TextView.PoppinsNormal10sp202020"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
         android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
         android:text="Arus Air :"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHum" />
@@ -152,6 +204,7 @@
         android:layout_marginEnd="5dp"
         app:layout_constraintEnd_toStartOf="@+id/tvVoltValDerajat"
         app:layout_constraintTop_toBottomOf="@+id/tvHumValDerajat" />
+
     <TextView
         android:id="@+id/tvVoltValDerajat"
         style="@style/TextView.PoppinsNormal10sp202020"
@@ -164,5 +217,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvHumValDerajat"
         />
+
+    <TextView
+        android:id="@+id/tvKeterangan"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="5dp"
+        android:text="Keterangan :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVolt" />
+
+    <TextView
+        android:id="@+id/tvKeteranganVal"
+        style="@style/TextView.PoppinsNormal10sp202020"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Aman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvVoltValDerajat" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
